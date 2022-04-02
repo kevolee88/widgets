@@ -12,7 +12,7 @@ const Route = ({ path, children }) => {
     return () => {
       window.removeEventListener('popstate', onLocationChange);
     };
-  },[]);
+  },[currentPath]);
 
   return window.location.pathname === path
     ? children
